@@ -111,14 +111,35 @@
 			// select the background of the page
 			const html = document.querySelector("html");
 			const banner = document.querySelector("header > h2");
+			const logo = document.getElementById("logo");
+			const wear = document.getElementById("wear");
+
 
 			switch(season){
 				case "spring": 
 					html.style.backgroundColor = "#2B7129";
 					banner.textContent = "Spring Forward!";
 				break;
+
+				case "summer": 
+					html.style.backgroundColor = "#EBA52B";
+					banner.textContent = "Slip into Summer!";
+				break;
+
+				case "fall": 
+					html.style.backgroundColor = "#A81124";
+					banner.textContent = "Fall Backwards!";
+				break;
+
+				case "winter": 
+					html.style.backgroundColor = "#005393";
+					banner.textContent = "Don't fall in Winter!";
+				break;
 			}
 		    
+			logo.src = "images/" + season + ".gif";
+			wear.src = "images/" + season + "-wear.jpg";
+
 		    // 4. Now you can use that 'season' variable to change pics/colors
 		    console.log("The season is: " + season);
 		}
